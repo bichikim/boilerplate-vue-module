@@ -1,0 +1,23 @@
+image: jjsoft2018/gitlab-runner-os:latest
+stages:
+  - test
+  - release
+
+cache:
+  paths:
+    - node_modules/*
+
+test_job:
+  stage: test
+  script:
+    - yarn install
+    - yarn test
+
+deploy_job:
+  stage: release
+  only:
+    - master
+  script:
+    - yarn install
+    - yarn build
+    - yarn release

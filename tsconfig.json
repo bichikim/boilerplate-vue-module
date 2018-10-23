@@ -1,0 +1,54 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "skipLibCheck": true,
+    // language environment
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["es2015", "esnext", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["lib/*"],
+      "@@/*": ["*"],
+      "~~/*": ["*"],
+      "src/*" : ["src/*"],
+      "lib/*": ["lib/*"]
+    },
+    "allowJs": true,
+
+    // build environment
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "removeComments": false,
+
+    // decorators
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    //lint
+    "strict": true,
+    "noImplicitThis": true,
+    "strictPropertyInitialization": false,
+    "alwaysStrict": true,
+    "noEmitHelpers": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false
+  },
+  "include": [
+    "**/*.ts",
+    "types/**/*.d.ts",
+    // @types 설정들
+    // "node_modules/@types/**/*.d.ts",
+    // jest-extended 를 사용 하기 위하여
+    "node_modules/jest-extended/types/*.d.ts"
+  ],
+  "exclude": [
+    ".nuxt",
+    ".keep",
+    "templates"
+  ]
+}
